@@ -1,28 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./reset.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header class="Header">
-        <nav class="flex">
-          <a href="index.html">Home</a>
-          <a href="">About</a>
-          <a href="lab1.html">Lab1</a>
-          <a href="">Lab2</a>
-          <a href="">Lab3</a>
-          <a href="">Lab4</a>
-          <a href="">Login</a>
-        </nav>
-        <div class="searchBar flex-search">
-          <input type="text" placeholder="Enter your course" class="Search_input">
-          <button type="submit" class="Search_btn"> Search</button>
-        </div>
-      </header>
-    <h1 class="Lab1_header">This is my lab1 </h1>
-</body>
+      <nav class="flex">
+        <a href="index.html">Home</a>
+        <a href="">About</a>
+        <a href="lab1.html">Lab1</a>
+        <a href="lab2.html">Lab2</a>
+        <a href="">Lab3</a>
+        <a href="">Lab4</a>
+        <a href="">Login</a>
+      </nav>
+      <div class="searchBar flex-search">
+        <input
+          type="text"
+          placeholder="Enter your course"
+          class="Search_input"
+        />
+        <button type="submit" class="Search_btn">Search</button>
+      </div>
+    </header>
+    <h1 class="Lab1_header">Create Course</h1>
+
+    <form action="" class="create_form">
+      <!-- Course ID (Read-only) -->
+      <div class="item">
+        <label class="create_label" for="courseId">Course ID</label>
+        <input
+          class="create_input"
+          type="text"
+          id="courseId"
+          name="courseId"
+          placeholder="Auto-generated"
+          readonly
+        />
+      </div>
+      <!-- Course Name (Required) -->
+      <div class="item">
+        <label for="courseName" class="create_label">Course Name</label>
+        <input
+          class="create_input"
+          type="text"
+          id="courseName"
+          name="courseName"
+          placeholder="Enter course name"
+          maxlength="255"
+          required
+        />
+      </div>
+
+      <!-- Course Description (Optional) -->
+      <div class="item form_area">
+        <label for="courseDescription">Course Description</label>
+        <textarea
+          id="courseDescription"
+          name="courseDescription"
+          rows="4"
+          placeholder="Enter detailed course description"
+        ></textarea>
+      </div>
+      <button type="submit" class="submit_form">Submit</button>
+    </form>
+  </body>
 </html>
