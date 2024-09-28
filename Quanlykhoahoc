@@ -1,0 +1,113 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class Quanlykhoahoc extends JFrame {
+    private JTextField courseIdField, courseNameField;
+    private JTextArea courseDescriptionArea;
+    private JComboBox<String> instructorComboBox;
+    private JLabel createdAtLabel, updatedAtLabel;
+    private JButton saveButton, viewButton, deleteButton;
+
+    // Sample data for instructors
+    private String[] instructors = {"Nguyen Van A", "Nguyen Van B", "Nguyen Thi C"};
+
+    public Quanlykhoahoc() {
+        setTitle("Course Management System");
+        setSize(400, 400);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new GridLayout(0, 2));
+
+        // Course ID (auto-generated, read-only)
+        add(new JLabel("Course ID:"));
+        courseIdField = new JTextField("Auto-generated");
+        courseIdField.setEditable(false);
+        add(courseIdField);
+
+        // Course Name
+        add(new JLabel("Course Name:"));
+        courseNameField = new JTextField();
+        add(courseNameField);
+
+        // Course Description
+        add(new JLabel("Course Description:"));
+        courseDescriptionArea = new JTextArea(5, 20);
+        add(new JScrollPane(courseDescriptionArea));
+
+        // Instructor
+        add(new JLabel("Instructor:"));
+        instructorComboBox = new JComboBox<>(instructors);
+        add(instructorComboBox);
+
+        // Created At
+        add(new JLabel("Created At:"));
+        createdAtLabel = new JLabel("2023-09-28 10:00:00"); // Example timestamp
+        add(createdAtLabel);
+
+        // Updated At
+        add(new JLabel("Updated At:"));
+        updatedAtLabel = new JLabel("2023-09-28 10:00:00"); // Example timestamp
+        add(updatedAtLabel);
+
+        // Save Button
+        saveButton = new JButton("Save Course");
+        saveButton.addActionListener(new SaveCourseAction());
+        add(saveButton);
+
+        // View Button
+        viewButton = new JButton("View Course");
+        viewButton.addActionListener(new ViewCourseAction());
+        add(viewButton);
+
+        // Delete Button
+        deleteButton = new JButton("Delete Course");
+        deleteButton.addActionListener(new DeleteCourseAction());
+        add(deleteButton);
+    }
+
+    private class SaveCourseAction implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            String courseName = courseNameField.getText();
+            String courseDescription = courseDescriptionArea.getText();
+            String instructor = (String) instructorComboBox.getSelectedItem();
+
+            // Validation
+            if (courseName.isEmpty()) {
+                JOptionPane.showMessageDialog(null, "Course Name is required.");
+                return;
+            }
+
+            // Here you would add logic to save the course to a database
+
+            JOptionPane.showMessageDialog(null, "Course saved successfully!");
+        }
+    }
+
+    private class ViewCourseAction implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            // Example: Open a new window or dialog to view course details
+            JOptionPane.showMessageDialog(null, "Viewing course details (not implemented)");
+        }
+    }
+
+    private class DeleteCourseAction implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            int response = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this course?", "Confirm", JOptionPane.YES_NO_OPTION);
+            if (response == JOptionPane.YES_OPTION) {
+                // Here you would add logic to delete the course from the database
+                JOptionPane.showMessageDialog(null, "Course deleted successfully!");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            Quanlykhoahoc cms = new Quanlykhoahoc();
+            cms.setVisible(true);
+        });
+    }
+}
