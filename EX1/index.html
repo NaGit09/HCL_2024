@@ -4,53 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./reset.css">
   </head>
   <body>
     <div class="wrap">
-      <form action="" class="flex">
-          <div class="item">
-            <label for="">User name : </label>
-            <input
-              name="Username"
-              type="text"
-              placeholder="Enter your name"
-              maxlength="255"
-              required
-            />
-          </div>
-      <div class="item">  <label for="">Password: </label>
-        <input
-          name="Password"
-          type="password"
-          placeholder="Enter your password"
-          maxlength="255"
-          required
-        /></div>
-       <div class="item">
-        <label for="">Email : </label>
-        <input
-          name="Email"
-          type="email"
-          placeholder="Enter your email"
-          maxlength="255"
-          required
-        />
-       </div>
-      </form>
-      <div class="fullName">
-        <label for="">Full name : </label>
-        <input type="text" placeholder="Enter your fullname">
-      </div>
-      <div class="dropdown">
-        <a href="" class="tag">Menu</a>
-        <div class="drop-content">
-            <a>Admin</a>
-            <a>User</a>
-            <a>Guest</a>
+      <header class="Header">
+        <nav class="flex">
+          <a href="">Home</a>
+          <a href="">About</a>
+          <a href="lab1.html">Lab1</a>
+          <a href="">Lab2</a>
+          <a href="">Lab3</a>
+          <a href="">Lab4</a>
+
+          <a href="">Login</a>
+        </nav>
+        <div class="searchBar flex-search">
+          <input type="text" placeholder="Enter your course" class="Search_input">
+          <button type="submit" class="Search_btn"> Search</button>
         </div>
-      </div>
-      <input type="file" placeholder="Enter your file ">
+      </header>
+      <main>
+        <div class="course_input">
+         <div class=""> 
+          <input type="text" placeholder="Enter your name course" maxlength=255 required>
+
+          <button type="submit">Enter</button>
+         </div>
+        <textarea name="desc" id="course_desc" placeholder="enter desc course"></textarea>
+        </div>
+      </main>
     </div>
   </body>
 </html>
