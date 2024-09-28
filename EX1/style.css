@@ -1,0 +1,26 @@
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.dropdown {
+    position: relative;
+    font-size: 20px;
+}
+.drop-content {
+    display: none;
+    position: absolute;
+}
+.drop-content a {
+    display: block;
+    cursor: pointer;
+    background-color: aqua;
+}
+.drop-content a:hover {
+    background-color: blue;
+    color: white;
+}
+.dropdown:hover  .drop-content {
+    display: block;
+}

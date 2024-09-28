@@ -1,11 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Hello world !</h1>
-</body>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <form action="" class="flex">
+          <div class="item">
+            <label for="">User name : </label>
+            <input
+              name="Username"
+              type="text"
+              placeholder="Enter your name"
+              maxlength="255"
+              required
+            />
+          </div>
+      <div class="item">  <label for="">Password: </label>
+        <input
+          name="Password"
+          type="password"
+          placeholder="Enter your password"
+          maxlength="255"
+          required
+        /></div>
+       <div class="item">
+        <label for="">Email : </label>
+        <input
+          name="Email"
+          type="email"
+          placeholder="Enter your email"
+          maxlength="255"
+          required
+        />
+       </div>
+      </form>
+      <div class="fullName">
+        <label for="">Full name : </label>
+        <input type="text" placeholder="Enter your fullname">
+      </div>
+      <div class="dropdown">
+        <a href="" class="tag">Menu</a>
+        <div class="drop-content">
+            <a>Admin</a>
+            <a>User</a>
+            <a>Guest</a>
+        </div>
+      </div>
+      <input type="file" placeholder="Enter your file ">
+    </div>
+  </body>
 </html>
