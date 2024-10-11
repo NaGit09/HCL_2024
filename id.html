@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showSection(section) {
+            document.querySelectorAll('.section').forEach(el => {
+                el.style.display = 'none';
+            });
+            document.getElementById(section).style.display = 'block';
+        }
+
+        function login(event) {
+            event.preventDefault();
+            // Implement login logic here
+            showSection('dashboard');
+        }
+
+        function selectExercise() {
+            showSection('coding-environment');
+        }
+    </script>
+</head>
+<body onload="showSection('login')">
+    <div id="login" class="section">
+        <div class="login-container">
+            <h2>Login to Your Account</h2>
+            <form id="login-form" onsubmit="login(event)">
+                <label for="username">Username/Email:</label>
+                <input type="text" id="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit">Login</button>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+        </div>
+    </div>
+
+    <div id="dashboard" class="section" style="display: none;">
+        <div class="dashboard">
+            <h1>Available Exercises</h1>
+            <input type="text" id="search" placeholder="Search exercises...">
+            
+            <div class="language-filter">
+                <button>All</button>
+                <button>C</button>
+                <button>Python</button>
+                <button>Java</button>
+            </div>
+            
+            <div class="exercises">
+                <!-- Example Exercise Card -->
+                <div class="exercise-card">
+                    <h3>Exercise Title</h3>
+                    <p>Short description of the exercise.</p>
+                    <p>Difficulty: Easy | Time Limit: 30 mins | Points: 10</p>
+                    <button onclick="selectExercise()">Select Exercise</button>
+                </div>
+                <!-- More exercise cards would go here -->
+            </div>
+        </div>
+    </div>
+
+    <div id="coding-environment" class="section" style="display: none;">
+        <div class="coding-environment">
+            <h2>Exercise Title</h2>
+            <p>Description of the exercise goes here.</p>
+            
+            <select id="language-switcher">
+                <option value="c">C</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+            </select>
+
+            <textarea id="code-editor" rows="15"></textarea>
+
+            <div class="actions">
+                <button id="run-code">Run Code</button>
+                <button id="clear-code">Clear Code</button>
+                <button id="submit-code">Submit Code</button>
+            </div>
+
+            <div class="test-cases">
+                <h3>Test Cases</h3>
+                <!-- Test Case List -->
+                <div class="test-case">
+                    <p>Input: ...</p>
+                    <p>Expected Output: ...</p>
+                    <p>Status: Passed/Failed</p>
+                </div>
+            </div>
+
+            <div class="results">
+                <h3>Submission Results</h3>
+                <p>Status: Success/Failed</p>
+                <p>Output: ...</p>
+                <p>Score: ...</p>
+                <p>Time Taken: ...</p>
+                <p>Memory Used: ...</p>
+                <button onclick="showSection('coding-environment')">Try Again</button>
+                <button onclick="showSection('dashboard')">Return to Dashboard</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
