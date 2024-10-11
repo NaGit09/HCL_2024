@@ -27,3 +27,9 @@ function openResult (pageName) {
     flag = true;
   }
 }
+function resetCode () {
+  const holder = document.getElementsByTagName("textarea");
+  for (let i = 0; i < holder.length; i++) {
+    holder[i].value = ""; // Reset the value of each textarea
+  }
+}
