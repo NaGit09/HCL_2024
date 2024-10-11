@@ -27,6 +27,8 @@ function openResult (pageName) {
     flag = true;
   }
 }
+// reset code 
+
 function resetCode () {
   const holder = document.getElementsByTagName("textarea");
   for (let i = 0; i < holder.length; i++) {
