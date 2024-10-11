@@ -35,3 +35,9 @@ function resetCode () {
     holder[i].value = ""; // Reset the value of each textarea
   }
 }
+function keyHandle (event) {
+  let str = event.key;
+  const search = document.getElementById("search-bar");
+   if (str === "Enter")  {
+    search.value = "";}
+}
