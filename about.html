@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .profile-card {
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        .profile-card img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .profile-card h2 {
+            margin: 16px 0 8px;
+        }
+
+        .profile-card .title {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .profile-card p {
+            margin: 4px 0;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .profile-card button {
+            margin-top: 12px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+        }
+
+        .profile-card button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-1/454007935_1295147424802612_2083475078642055725_n.jpg?stp=c0.253.960.960a_dst-jpg_s200x200&_nc_cat=103&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeGHftwR9CqhAFta7wsgez3_0aBgefhg5CbRoGB5-GDkJsZ8mMTX7k7WKq8FmBkQ7k79GV__RSOLlsvSeqqac4Lu&_nc_ohc=o3xsJa_3_gQQ7kNvgE92Z0m&_nc_ht=scontent.fsgn2-9.fna&_nc_gid=AmoI0Yg9bTmh1ZIqX4uIuJk&oh=00_AYAx8r_RgEEAQPKKhsZcmtv735kPdqeoQqEIYAEcJiUIYQ&oe=671E8F75" alt="Profile Picture">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Phasellus eget enim eu lectus faucibus vestibulum.</p>
+        <p>example@example.com</p>
+        <button onclick="window.open('https://www.facebook.com/phan.phat.336717/', '_blank')">Contact</button>
+
+    </div>
+</body>
+</html>
