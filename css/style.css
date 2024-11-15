@@ -198,3 +198,97 @@ header {
     background-color: black;
     color: white;
 }
+
+
+/* ----LOGIN---- */
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid #343a40;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    color: #ffffff;
+  }
+
+  .color-register {
+    color: #ffffff;
+  }
+
+
+  .nav-pills .nav-link.active {
+    color: #007bff !important; /* Màu xanh cho tab đang chọn */
+    background-color: #343a40; /* Màu nền tùy chỉnh cho tab */
+}
+#ex1 {
+    border: none;
+}
+.nav-pills .nav-link.inactive {
+    color: white !important; /* Màu trắng cho tab không chọn */
+}
+.nav-link:hover {
+    color: #007bff; /* Màu xanh khi hover */
+}
+
+
+  .login-form,
+  .register-form {
+    background-color: #343a40;
+    padding: 20px;
+  }
+
+  .card.bg-dark {
+    background-color: #343a40;
+  }
+
+  .nav-justified>.nav-link,
+  .nav-justified .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .login-form,
+  .register-form {
+    background-color: #303030;
+  }
+
+  .form-outline .form-control {
+    min-height: auto;
+    padding-top: .32rem;
+    padding-bottom: .32rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    border: #ffffff 2px solid;
+    transition: all .2s linear;
+  }
+  #tab-login,
+  #registerTitle {
+      background-color: #3c3c3c;
+  }
+  #registerForm {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+ 
+  
+  
