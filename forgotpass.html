@@ -14,28 +14,28 @@
 </head>
 <style>
 
-    body, html {
+     html {
         height: 100%;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 0;
-        background-color: #222;
     }
+     body::before {
+         content: "";
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: url('/img/bac.webp') no-repeat center center fixed;
+         background-size: cover;
+         opacity: 0.8;
+         z-index: -1;
+         filter: brightness(50%);
+     }
 
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('/img/bac.webp') no-repeat center center fixed;
-        background-size: cover;
-        opacity: 0.8;
-        z-index: -1;
-    }
 
     .forgot-password-section {
         display: flex;
@@ -77,6 +77,9 @@
         color: #007bff;
         text-decoration: none;
     }
+    body{
+
+    }
 
 
 </style>
@@ -117,18 +120,30 @@
                         </div>
                     </div>
 
-                    <button type="submit" data-mdb-button-init="" data-mdb-ripple-init=""
-                            class="btn btn-primary btn-block w-100 mb-3" data-mdb-button-initialized="true">
+                    <button id="resetButton" type="button" class="btn btn-primary btn-block w-100 mb-3">
                         Send Reset Link
                     </button>
 
                     <p class="text-center mt-3">
-                        Remembered your password? <a href="/HCL_2024/index.html">Login</a>
+                        Remembered your password? <a id="loginLink" href="/HCL_2024/index.html">Login</a>
                     </p>
+
+                    <div id="successMessage" class="alert alert-success text-center" style="display: none;">
+                        Link đã được gửi thành công!
+                    </div>
                 </form>
             </div>
         </div>
     </section>
 </div>
-
+<script>
+    document.getElementById("resetButton").addEventListener("click", function() {
+        var successMessage = document.getElementById("successMessage");
+        successMessage.style.display = "block";
+        setTimeout(function() {
+            var loginLink = document.getElementById("loginLink").href;
+            window.location.href = loginLink;
+        }, 700);
+    });
+</script>
 </html>
