@@ -58,3 +58,33 @@ function showRegisterForm() {
     form.style.visibility = "visible";
 }
 
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const inputs = document.querySelectorAll(".form-outline .form-control");
+
+    inputs.forEach(input => {
+        if (input.value) {
+            input.classList.add("active");
+        }
+
+        input.addEventListener("input", function () {
+            if (this.value) {
+                this.classList.add("active");
+            } else {
+                this.classList.remove("active");
+            }
+        });
+
+        input.addEventListener("focus", function () {
+            this.classList.add("active");
+        });
+
+        input.addEventListener("blur", function () {
+            if (!this.value) {
+                this.classList.remove("active");
+            }
+        });
+    });
+});
