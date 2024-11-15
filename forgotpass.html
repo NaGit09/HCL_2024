@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exercise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+
+    body, html {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        background-color: #222;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('/img/bac.webp') no-repeat center center fixed;
+        background-size: cover;
+        opacity: 0.8;
+        z-index: -1;
+    }
+
+    .forgot-password-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #303030;
+        padding: 20px;
+        border-radius: 8px;
+        width: 26rem;
+    }
+
+    .forgot-password-content {
+        padding: 20px;
+        border-radius: 8px;
+        color: #fff;
+    }
+
+    .text-center p, .text-center a {
+        color: #fff;
+    }
+
+    .form-outline input[type="email"] {
+        background-color: #444;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+    .form-outline .form-label {
+        color: #bbb;
+    }
+
+    .text-center a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+
+</style>
+<div class="forgot-password-form" id="forgot-password-form">
+    <section class="w-100 p-4 d-flex justify-content-center pb-4 forgot-password-section">
+        <div style="width: 26rem;">
+            <div class="forgot-password-content" style="background-color: #303030;">
+                <form>
+                    <div class="text-center mb-3">
+                        <p>Reset your password:</p>
+                        <button type="button" data-mdb-button-init="" data-mdb-ripple-init=""
+                                class="btn btn-link btn-floating mx-1" data-mdb-button-initialized="true">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button type="button" data-mdb-button-init="" data-mdb-ripple-init=""
+                                class="btn btn-link btn-floating mx-1" data-mdb-button-initialized="true">
+                            <i class="fab fa-google"></i>
+                        </button>
+                        <button type="button" data-mdb-button-init="" data-mdb-ripple-init=""
+                                class="btn btn-link btn-floating mx-1" data-mdb-button-initialized="true">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button type="button" data-mdb-button-init="" data-mdb-ripple-init=""
+                                class="btn btn-link btn-floating mx-1" data-mdb-button-initialized="true">
+                            <i class="fab fa-github"></i>
+                        </button>
+                    </div>
+
+                    <p class="text-center">or enter your email below:</p>
+
+                    <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
+                        <input type="email" id="resetEmail" class="form-control" required>
+                        <label class="form-label" for="resetEmail" style="margin-left: 0px;">Email</label>
+                        <div class="form-notch">
+                            <div class="form-notch-leading" style="width: 9px;"></div>
+                            <div class="form-notch-middle" style="width: 40px;"></div>
+                            <div class="form-notch-trailing"></div>
+                        </div>
+                    </div>
+
+                    <button type="submit" data-mdb-button-init="" data-mdb-ripple-init=""
+                            class="btn btn-primary btn-block w-100 mb-3" data-mdb-button-initialized="true">
+                        Send Reset Link
+                    </button>
+
+                    <p class="text-center mt-3">
+                        Remembered your password? <a href="/HCL_2024/index.html">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+
+</html>
